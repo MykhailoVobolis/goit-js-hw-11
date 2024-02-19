@@ -16,44 +16,19 @@
   <body>
     <section>
       <form class="input-search-form">
-        <input type="text" id="select-image" placeholder="Search images..." />
+        <input
+          name="search"
+          type="text"
+          id="select-image"
+          placeholder="Search images..."
+        />
         <button type="submit" data-fetch>Search</button>
       </form>
       <div class="container">
-        <span class="loader"></span>
-        <ul class="gallery">
-          <!-- <li class="gallery-item">
-          <a class="gallery-link" href="${i.largeImageURL}">
-            <img
-              class="gallery-image"
-              src="${i.webformatURL}"
-              alt="${i.tags}"
-              width="360"
-              height="200"
-          /></a>
-          <div class="parameters-block">
-            <div class="parameter">
-              <h2 class="title">Likes</h2>
-              <p class="amount">${likes}</p>
-            </div>
-            <div class="parameter">
-              <h2 class="title">Views</h2>
-              <p class="amount">${views}</p>
-            </div>
-            <div class="parameter">
-              <h2 class="title">Comments</h2>
-              <p class="amount">${comments}</p>
-            </div>
-            <div class="parameter">
-              <h2 class="title">Downloads</h2>
-              <p class="amount">${downloads}</p>
-            </div>
-          </div>
-        </li> -->
-        </ul>
+        <span class="loader is-hidden"></span>
+        <ul class="gallery"></ul>
       </div>
     </section>
-    <script src="./js/pixabay-ap.js" type="module"></script>
-    <script src="./js/render-functions.js" type="module"></script>
+    <script src="./main.js" type="module"></script>
   </body>
 </html>

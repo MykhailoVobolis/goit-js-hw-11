@@ -1,12 +1,6 @@
-// Додавання бібліотеки SimpleLightbox
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
-
 // Створення галереї зображень
-export const list = document.querySelector('.gallery');
-
 export function markupGallery(images) {
-  const imageItem = images
+  return images
     .map(
       i => ` <li class="gallery-item">
           <a class="gallery-link" href="${i.largeImageURL}">
@@ -38,15 +32,4 @@ export function markupGallery(images) {
         </li>`
     )
     .join('');
-
-  list.insertAdjacentHTML('beforeend', imageItem);
-
-  //Ініціалізація бібліотеки SimpleLightbox та налаштування опций модального вікна
-  const lightbox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt',
-    captionPosition: 'bottom',
-    captionDelay: 250,
-  });
-
-  lightbox.refresh();
 }
