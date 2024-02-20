@@ -55,7 +55,19 @@ function fetchImage(event) {
       event.target.reset();
     })
     .catch(error => {
-      console.log(error);
+      //   Повідомлення про тип помилки
+      iziToast.error({
+        message: `${error}`,
+        transitionIn: 'bounceInDown',
+        theme: 'dark',
+        messageColor: '#ffffff',
+        messageSize: 16,
+        messageLineHeight: 24,
+        color: '#ef4040',
+        progressBar: false,
+        position: 'topRight',
+        maxWidth: 432,
+      });
     })
 
     .finally(() => {

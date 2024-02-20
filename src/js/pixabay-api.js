@@ -1,6 +1,6 @@
 // Запит до Pixabay API
 export function getPictures(query) {
-  const API_KEY = '42379891-9b2b3e5f2dd038df1d72b79a3';
+  const API_KEY = '42417927-02b658e2f5610bf7e034ab0b0';
   const BASE_URL = 'https://pixabay.com/api/';
 
   const searchParams = new URLSearchParams({
@@ -9,6 +9,7 @@ export function getPictures(query) {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
+    per_page: 200,
   });
 
   return fetch(`${BASE_URL}?${searchParams}`).then(response => {
